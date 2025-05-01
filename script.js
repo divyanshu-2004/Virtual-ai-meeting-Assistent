@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.panel-content');
   
-  
+    // Theme toggle
     themeToggle.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
     });
   
-
+    // Side panel toggle
     chatBtn.addEventListener('click', () => {
       sidePanel.classList.toggle('active');
     });
   
-    
+    // Tab switching
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const tab = btn.dataset.tab;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    
+    // Initialize WebRTC
     let localStream;
   
     async function initializeMedia() {
